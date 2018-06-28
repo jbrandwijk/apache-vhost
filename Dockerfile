@@ -13,6 +13,7 @@ RUN	chmod u+x /etc/services.d/*/run
 EXPOSE 	80
 
 #	Config...
+RUN	sed -i -e 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
 RUN	ln -s /etc/apache2/mods-available/vhost_alias.load \
 	/etc/apache2/mods-enabled/vhost_alias.load
 RUN	rm -rf /etc/apache2/sites-enabled &&\
