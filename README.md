@@ -61,6 +61,6 @@ and you can have /home/www/another.example.com for your website on another.examp
 * You have PHP 7 support
 Basic PHP7 support has been built in.
 
-* There is an init system wihtin the container
-In order to facilitate the web server, this image has been built on top of a
-debian images with an [s6 overlay](https://github.com/just-containers/s6-overlay)
+* Within the original repository (branch master on github, pyromanic/apache-vhost:latest on
+docker-hub), there is an init system wihtin the container. With in the nos6 branch/version
+this layer has been eliminated and is built directly on top of the debian:stable-slim base image.
